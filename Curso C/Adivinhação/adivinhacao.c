@@ -1,4 +1,5 @@
 #include <stdio.h>
+#define NUMERO_TENTATIVAS 5
 
 int main() {
 
@@ -12,10 +13,10 @@ int main() {
 	int chute;
 
 	// comando de lopp em 3 tentativas
-	for (int i = 1; i<= 3; i++)
+	for (int i = 1; i<= NUMERO_TENTATIVAS; i++)
 	{
 		// corpo do código
-		printf("\n Tentativa %d de 3 \n", i);
+		printf("\n Tentativa %d de %d \n", i, NUMERO_TENTATIVAS);
 		printf("Qual é o seu chute? ");
 		scanf ("%d", &chute);
 		printf("Seu chute foi: %d \n", chute);
@@ -25,6 +26,7 @@ int main() {
 			{
 				printf("Parabéns! Voçê acertou! \n");
 				printf("Voçê é um bom jogador! Vamos jogar novamente? \n");
+				break;
 			}
 		
 		else
@@ -40,6 +42,6 @@ int main() {
 						printf("Seu chute foi menor que o número secreto! \n");
 					}
 			}
-	} /
+	} 
 	printf("\n Fim de jogo \n");
 }
